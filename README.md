@@ -26,4 +26,4 @@ Texto codificado: HIJKLMNOPQRSTUVWXYZABCDEFG
 
 ```
 ## Diagrama de Flujo:
-![CIFRADO CESAR](assets/img/CIFRADO CESAR.png)
+![CIFRADO CESAR](assets/img/cifradoCesar.png)
