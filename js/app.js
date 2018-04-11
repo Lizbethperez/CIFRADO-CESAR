@@ -51,23 +51,24 @@ function cipher(message){
  // FUNCION DECIPHER
 
  function decipher(messageArrayCipher){
-var arrayDecipher=[];
-var decipherMessage;
-var strMessageDecipher;
-var  messageAsciidecipher;
-var arrayMessageAsciiDecipher=[];
-var finalMessageDecipher;
+ var arrayDecipher=[];
+ var decipherMessage;
+ var strMessageDecipher;
+ var  messageAsciidecipher;
+ var arrayMessageAsciiDecipher=[];
+ var finalMessageDecipher;
 
-   for(var m=0; m<messageArrayCipher.length;m++){
-       messageAsciidecipher=messageArrayCipher.charCodeAt(m);
-      arrayMessageAsciiDecipher.push(messageAsciidecipher);
-   }//cierre del for en m
-     for(var t=0; t<arrayMessageAsciiDecipher.length;t++ ){
-      decipherMessage=(arrayMessageAsciiDecipher[m]-65-33)%26+65;
-      strMessageDecipher=String.fromCharCode(decipherMessage);
-      finalMessageDecipher += decipherMessag;
-   }
-    alert("TU MENSAJE ORIGINAL ES"+  finalMessageDecipher);
+    for(var m=0; m<messageArrayCipher.length;m++){
+        messageAsciidecipher=messageArrayCipher.charCodeAt(m);
+       arrayMessageAsciiDecipher.push(messageAsciidecipher);
+    }//cierre del for en m
+      for(var t=0; t<arrayMessageAsciiDecipher.length;t++ ){
+       decipherMessage=(arrayMessageAsciiDecipher[t]-65-33)%26+65;
+       strMessageDecipher=String.fromCharCode(decipherMessage);
+       finalMessageDecipher += strMessageDecipher ;
 
-}
-decipher(cipher(input));
+     alert("TU MENSAJE ORIGINAL ES"+  finalMessageDecipher);
+
+    }//for en t
+ }
+ decipher(cipher(input));
