@@ -18,3 +18,32 @@ do{
    }while(converInputAscii<65 || converInputAscii>90 && converInputAscii<97 || converInputAscii>122); // te regresa a solicitar nuevamente el mensaje cuando ingresas caracteres especiales y numeros;
 
 }while(input=== "");// te regresa a solicitar nuevamente el mensaje cuando dejas el espacio en blanco;
+
+//INICIANDO FUNCION CIPHER
+
+function cipher(message){
+  var messageAscii;
+  var arrayMessageAscii=[];
+  var messageString;
+  var strMessageCipher;
+  var finalMessageCipher='';
+  var cipherMessage;
+
+    for(j=0;j<message.length;j++){
+      messageAscii=message.charCodeAt(j); // se convierte en mensaje introducido a codigo Ascii
+       arrayMessageAscii.push(messageAscii); // se intrega cada valor convertido en Ascii a un Arreglo
+       console.log(arrayMessageAscii);
+    }//cierra el fot en j
+
+    for(k=0; k<arrayMessageAscii.length;k++){
+      cipherMessage=(arrayMessageAscii[k]-65+33)%26+65; //se utiliza el cada uno de los valores convertidos a Ascii y se encriptan con la formula del cifrado cesar.
+      strMessageCipher=String.fromCharCode(cipherMessage); // Se convierte el valor de la formula obtenida a una Striig
+      finalMessageCipher += strMessageCipher;
+    }// cierra el For en k
+
+   alert("TU MENSAJE ENCRIPTADO ES------>: " +" "+finalMessageCipher); //se manda el resultado del mensaje encriptado al usuario
+
+   return (finalMessageCipher);
+
+}//cierra funcion cipher
+ cipher(input);
